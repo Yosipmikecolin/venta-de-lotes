@@ -1,0 +1,184 @@
+.menu {
+  position: absolute;
+  top: 0.2;
+  width: 100%;
+  z-index: 10;
+  color: white;
+}
+
+.menu > ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+  font-size: 20px;
+}
+
+.menu > ul > li:nth-child(1) {
+  cursor: pointer;
+}
+
+.front-page {
+  height: 700px;
+  background-image: url("../../public/portada.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  position: relative;
+  margin: 5px 20px;
+  border-radius: 10px;
+}
+
+.front-page::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  background-color: #56613f91;
+}
+
+.title {
+  position: relative;
+  top: 40%;
+  left: 10%;
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+
+.title > h1 {
+  color: #f46500;
+  font-size: 50px;
+  font-weight: 300;
+}
+
+.title > h2 {
+  color: white;
+  font-size: 40px;
+}
+
+.container-buttons {
+  display: flex;
+  margin-top: 30px;
+  gap: 10px;
+}
+
+.container-buttons > button:nth-child(1) {
+  border: none;
+  background-color: #f46500;
+  color: white;
+  padding: 10px 50px;
+  transition: 300ms ease;
+}
+
+.container-buttons > button:nth-child(1):hover {
+  background-color: #c95909;
+}
+
+.container-benefits {
+  padding: 10px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #56613f23;
+  margin: 20px;
+  border-radius: 10px;
+}
+
+.container-benefits > h1 {
+  font-size: 40px;
+}
+
+.container-box {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 50px;
+  margin-top: 30px;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+}
+.box > h3 {
+  font-size: 20px;
+}
+
+@media (max-width: 1292px) {
+  .container-benefits > h1 {
+    font-size: 30px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 1316px) {
+  .title > h1 {
+    font-size: 30px;
+  }
+
+  .title > h2 {
+    font-size: 25px;
+  }
+
+  .container-buttons > button:nth-child(1) {
+    padding: 10px 30px;
+  }
+}
+
+@media (max-width: 938px) {
+  .title {
+    left: 0;
+  }
+
+  .front-page {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .container-buttons {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .box {
+    width: auto;
+  }
+
+  .container-benefits > h1 {
+    font-size: 20px;
+    color: #dd6108;
+  }
+}
+
+@media (max-width: 414px) {
+  .title > h1 {
+    font-size: 25px;
+  }
+
+  .title > h2 {
+    font-size: 22px;
+    margin: 10px 0px;
+  }
+}
+
+@media (max-width: 322px) {
+  .container-buttons {
+    flex-direction: column;
+  }
+
+  .title {
+    margin-top: 100px;
+  }
+
+  .front-page {
+    height: auto;
+  }
+}
