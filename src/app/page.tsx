@@ -3,8 +3,7 @@ import styles from "../css/page.module.css";
 import Logo from "../../public/logo.png";
 import Imagen1 from "../../public/image-1.jpg";
 import { Poppins } from "next/font/google";
-import { Swiper, SwiperSlide } from "swiper/react";
-import 'swiper/css';
+import "swiper/css";
 const poppins = Poppins({ weight: "600", subsets: ["latin"] });
 const poppins2 = Poppins({ weight: "500", subsets: ["latin"] });
 
@@ -44,7 +43,7 @@ export default function Home() {
               <Image
                 src={Imagen1}
                 alt="Imagen 1"
-                style={{ borderRadius: 10, height: 500, objectFit: "cover" }}
+                style={{ borderRadius: 10, height: 400, objectFit: "cover" }}
               />
               <h3 className={poppins.className}>Carretera pavimentada</h3>
               <p>
@@ -57,26 +56,10 @@ export default function Home() {
             </div>
 
             <div className={styles.box}>
-              <img
-                src={Imagen1.src}
-                alt="Imagen 1"
-                style={{ borderRadius: 10, height: 500, objectFit: "cover" }}
-              />
-              <h3 className={poppins.className}>Negocios de comida</h3>
-              <p>
-                Sumérjase en una experiencia culinaria diversa sin tener que
-                viajar lejos. Nuestros lotes están estratégicamente ubicados
-                cerca de una variedad de negocios de comida, desde restaurantes
-                locales hasta vibrantes mercados. Deléitese con la conveniencia
-                de tener opciones gastronómicas a su alcance.
-              </p>
-            </div>
-
-            <div className={styles.box}>
               <Image
                 src={Imagen1}
                 alt="Imagen 1"
-                style={{ borderRadius: 10, height: 500, objectFit: "cover" }}
+                style={{ borderRadius: 10, height: 400, objectFit: "cover" }}
               />
               <h3 className={poppins.className}>Rio</h3>
               <p>
@@ -93,24 +76,7 @@ export default function Home() {
               <Image
                 src={Imagen1}
                 alt="Imagen 1"
-                style={{ borderRadius: 10, height: 500, objectFit: "cover" }}
-              />
-              <h3 className={poppins.className}>Cerca de la ciudad</h3>
-              <p>
-                Experimente lo mejor de ambos mundos: la tranquilidad de la vida
-                suburbana y la accesibilidad de la vida en la ciudad. Nuestros
-                lotes están estratégicamente ubicados cerca de la ciudad,
-                brindándole la comodidad de acceder a servicios, entretenimiento
-                y oportunidades culturales sin sacrificar la paz y la privacidad
-                que ofrece un entorno más rural.
-              </p>
-            </div>
-
-            <div className={styles.box}>
-              <Image
-                src={Imagen1}
-                alt="Imagen 1"
-                style={{ borderRadius: 10, height: 500, objectFit: "cover" }}
+                style={{ borderRadius: 10, height: 400, objectFit: "cover" }}
               />
               <h3 className={poppins.className}>Piscilagos</h3>
               <p>
@@ -124,7 +90,60 @@ export default function Home() {
             </div>
           </section>
         </section>
+        <section className={styles["container-map"]}>
+          <div>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!4v1705350803024!6m8!1m7!1sFdcHl_Y71SIFKKA92CC4Zw!2m2!1d4.620893731189287!2d-72.914141009768!3f193.00417578866413!4f-15.130574685098125!5f0.7820865974627469"
+              width="100%"
+              height="100%"
+              style={{ border: "5px solid white" }}
+              allowFullScreen={true}
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
 
+          <div style={{ height: 200 }}>
+            <h1>Ubicacion de nuestros lotes</h1>
+            <p>
+              Experimente lo mejor de ambos mundos: la tranquilidad de la vida
+              suburbana y la accesibilidad de la vida en la ciudad. Nuestros
+              lotes están estratégicamente ubicados cerca de la ciudad,
+              brindándole la comodidad de acceder a servicios, entretenimiento y
+              oportunidades culturales sin sacrificar la paz y la privacidad que
+              ofrece un entorno más rural.
+            </p>
+          </div>
+        </section>
+
+        <section className={styles["container-video"]}>
+          <div style={{ height: 200 }}>
+            <h1>Recorrido del pueblo a nuestros lotes</h1>
+            <p>
+              Embárcate en un viaje visual cautivador desde el corazón del
+              encantador pueblo de Villanuieva hasta la puerta de tu futuro
+              hogar. Nuestro video te lleva a un viaje panorámico, capturado
+              desde la perspectiva aérea de un dron. Experimenta la transición
+              gradual desde la vida vibrante del pueblo hasta la serena belleza
+              de nuestros exclusivos lotes. Descubre la armonía entre la
+              comodidad urbana y la privacidad natural mientras exploras cada
+              detalle del camino que te llevará a un nuevo capítulo de tu vida.
+              ¡Bienvenido a tu futuro hogar, donde la conexión con la naturaleza
+              se encuentra con la conveniencia moderna!
+            </p>
+          </div>
+
+          <div>
+            <video
+              width="100%"
+              height={"100%"}
+              controls
+              style={{ border: 0, borderRadius: 10 }}
+            >
+              <source src="/video.mp4" type="video/mp4" />
+            </video>
+          </div>
+        </section>
       </main>
     </section>
   );
