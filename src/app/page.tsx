@@ -3,11 +3,11 @@ import styles from "../css/page.module.css";
 import Logo from "../../public/logo.png";
 import Imagen1 from "../../public/image-1.jpg";
 import { Poppins } from "next/font/google";
+import Gallery from "@/components/gallery/Gallery";
 const poppins = Poppins({ weight: "600", subsets: ["latin"] });
 const poppins2 = Poppins({ weight: "500", subsets: ["latin"] });
 
 export default function Home() {
-
   return (
     <section className={styles.container}>
       <header>
@@ -93,7 +93,7 @@ export default function Home() {
         <section className={styles["container-map"]}>
           <div>
             <iframe
-              src="https://www.google.com/maps/embed?pb=!4v1705350803024!6m8!1m7!1sFdcHl_Y71SIFKKA92CC4Zw!2m2!1d4.620893731189287!2d-72.914141009768!3f193.00417578866413!4f-15.130574685098125!5f0.7820865974627469"
+              src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d4463.858123734838!2d-72.91281931686267!3d4.621622949591718!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2sco!4v1705507962180!5m2!1ses!2sco"
               width="100%"
               height="100%"
               style={{ border: "5px solid white" }}
@@ -144,6 +144,7 @@ export default function Home() {
             </video>
           </div>
         </section>
+        <Gallery />
       </main>
     </section>
   );
