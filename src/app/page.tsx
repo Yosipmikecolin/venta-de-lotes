@@ -3,11 +3,11 @@ import styles from "../css/page.module.css";
 import Logo from "../../public/logo.png";
 import Imagen1 from "../../public/image-1.jpg";
 import { Poppins } from "next/font/google";
-import "swiper/css";
 const poppins = Poppins({ weight: "600", subsets: ["latin"] });
 const poppins2 = Poppins({ weight: "500", subsets: ["latin"] });
 
 export default function Home() {
+
   return (
     <section className={styles.container}>
       <header>
@@ -103,7 +103,7 @@ export default function Home() {
             ></iframe>
           </div>
 
-          <div style={{ height: 200 }}>
+          <div>
             <h1>Ubicacion de nuestros lotes</h1>
             <p>
               Experimente lo mejor de ambos mundos: la tranquilidad de la vida
@@ -117,7 +117,7 @@ export default function Home() {
         </section>
 
         <section className={styles["container-video"]}>
-          <div style={{ height: 200 }}>
+          <div>
             <h1>Recorrido del pueblo a nuestros lotes</h1>
             <p>
               Embárcate en un viaje visual cautivador desde el corazón del

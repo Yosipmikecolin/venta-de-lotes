@@ -109,14 +109,34 @@
 }
 
 .container-map > div:nth-child(1) {
-  width: 100%;
+  width: 50%;
+  height: 400px;
+  overflow: hidden;
+}
+
+.container-map > div:nth-child(2) {
+  width: 50%;
+  height: 300px;
+  overflow: hidden;
+}
+
+.container-map > div:nth-child(2) > h1 {
+  font-size: 50px;
+  color: #6e6418;
+}
+
+.container-map > div:nth-child(2) > p {
+  font-size: 20px;
+}
+
+.container-video > div:nth-child(1) {
+  width: 50%;
   height: 500px;
   overflow: hidden;
 }
 
-.container-video > div:nth-child(1) {
-  width: 100%;
-  height: 500px;
+.container-video > div:nth-child(2) {
+  width: 50%;
   overflow: hidden;
 }
 
@@ -126,15 +146,6 @@
 }
 
 .container-video > div:nth-child(1) > p {
-  font-size: 20px;
-}
-
-.container-map > div:nth-child(2) > h1 {
-  font-size: 50px;
-  color: #6e6418;
-}
-
-.container-map > div:nth-child(2) > p {
   font-size: 20px;
 }
 
@@ -155,7 +166,11 @@
 .box {
   display: flex;
   flex-direction: column;
-  width: 600px;
+  width: 700px;
+}
+
+.box > p {
+  font-size: 20px;
 }
 
 .box > h3 {
@@ -164,10 +179,55 @@
 
 /*MEDIAS QUERYES*/
 
+@media (max-width: 2020px) {
+  .container-video > div:nth-child(1) {
+    height: 400px;
+  }
+}
+
+@media (max-width: 1812px) {
+  .container-video > div:nth-child(1) {
+    height: 500px;
+  }
+}
+
+@media (max-width: 1584px) {
+  .container-map > div:nth-child(2) > h1 {
+    font-size: 30px;
+    height: auto;
+  }
+
+  .container-video > div:nth-child(1) > h1 {
+    font-size: 30px;
+    height: auto;
+  }
+}
+
+@media (max-width: 1460px) {
+  .container-video {
+    flex-wrap: wrap-reverse;
+  }
+  .container-video > div:nth-child(1) {
+    width: 100%;
+    height: auto;
+  }
+
+  .container-video > div:nth-child(2) {
+    width: 100%;
+    height: auto;
+  }
+}
+
 @media (max-width: 1292px) {
   .container-benefits > h1 {
     font-size: 30px;
     text-align: center;
+  }
+}
+
+@media (max-width: 1120px) {
+  .container-map > div:nth-child(2) {
+    height: auto;
   }
 }
 
@@ -182,6 +242,21 @@
 
   .container-buttons > button:nth-child(1) {
     padding: 10px 30px;
+  }
+}
+
+@media (max-width: 966px) {
+  .container-map {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .container-map > div:nth-child(1) {
+    width: 100%;
+  }
+
+  .container-map > div:nth-child(2) {
+    width: 100%;
   }
 }
 
