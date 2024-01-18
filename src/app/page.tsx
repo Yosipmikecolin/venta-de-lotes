@@ -1,7 +1,10 @@
 import Image from "next/image";
 import styles from "../css/page.module.css";
 import Logo from "../../public/logo.png";
-import Imagen1 from "../../public/image-1.jpg";
+import Imagen1 from "../../public/imagen-1.png";
+import Imagen2 from "../../public/imagen-2.jpg";
+import Imagen3 from "../../public/image-3.jpeg";
+import Imagen4 from "../../public/image-4.jpg";
 import { Poppins } from "next/font/google";
 import Gallery from "@/components/gallery/Gallery";
 const poppins = Poppins({ weight: "600", subsets: ["latin"] });
@@ -57,11 +60,11 @@ export default function Home() {
 
             <div className={styles.box}>
               <Image
-                src={Imagen1}
+                src={Imagen2}
                 alt="Imagen 1"
                 style={{ borderRadius: 10, height: 400, objectFit: "cover" }}
               />
-              <h3 className={poppins.className}>Rio</h3>
+              <h3 className={poppins.className}>Rio rancho king</h3>
               <p>
                 Descubra la serenidad y la belleza natural de tener un río cerca
                 de su hogar. Desde vistas panorámicas hasta actividades
@@ -74,7 +77,7 @@ export default function Home() {
 
             <div className={styles.box}>
               <Image
-                src={Imagen1}
+                src={Imagen3}
                 alt="Imagen 1"
                 style={{ borderRadius: 10, height: 400, objectFit: "cover" }}
               />
@@ -86,6 +89,23 @@ export default function Home() {
                 relajado. Con un parque de agua cerca, siempre tendrá la opción
                 de disfrutar de momentos emocionantes y refrescantes sin tener
                 que alejarse demasiado de casa.
+              </p>
+            </div>
+
+            <div className={styles.box}>
+              <Image
+                src={Imagen4}
+                alt="Imagen 1"
+                style={{ borderRadius: 10, height: 400, objectFit: "cover" }}
+              />
+              <h3 className={poppins.className}>Cerca de la Ciudad</h3>
+              <p>
+                Experimente lo mejor de ambos mundos: la tranquilidad de la vida
+                suburbana y la accesibilidad de la vida en la ciudad. Nuestros
+                lotes están estratégicamente ubicados cerca de la ciudad,
+                brindándole la comodidad de acceder a servicios, entretenimiento
+                y oportunidades culturales sin sacrificar la paz y la privacidad
+                que ofrece un entorno más rural.
               </p>
             </div>
           </section>
@@ -118,7 +138,7 @@ export default function Home() {
 
         <section className={styles["container-video"]}>
           <div>
-            <h1>Recorrido del pueblo a nuestros lotes</h1>
+            <h1>Recorrido de la ciudad a nuestros lotes</h1>
             <p>
               Embárcate en un viaje visual cautivador desde el corazón del
               encantador pueblo de Villanuieva hasta la puerta de tu futuro
