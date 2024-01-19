@@ -3,7 +3,7 @@
 import "./Gallery.css";
 import Image, { StaticImageData } from "next/image";
 import IconClose from "../../../public/icon-close.png";
-import { useCallback, useState } from "react";
+import { useCallback, useState, MouseEvent } from "react";
 import { listImages } from "@/utils/list-images";
 
 const Gallery = () => {
@@ -38,6 +38,14 @@ const Gallery = () => {
     }
   }, []);
 
+  const closeModal = (e: MouseEvent<HTMLDivElement>) => {
+    const clickedElement = e.target as HTMLDivElement;
+    const nameClass = clickedElement.classList;
+    if (nameClass[0] === "container-gallery") {
+      setOpen(false);
+    }
+  };
+
   return (
     <section>
       <h1 className="title-gallery">Fotos de lotes</h1>
@@ -55,9 +63,9 @@ const Gallery = () => {
       </section>
 
       {open && fotoSelect && (
-        <div className="container-gallery">
+        <div className="container-gallery" onClick={closeModal}>
           <img src={IconClose.src} width={50} onClick={() => setOpen(false)} />
-          <div className="view-image">
+          <div className="view-image" data-info={true}>
             <Image
               src={fotoSelect.foto}
               alt="foto de lote"
