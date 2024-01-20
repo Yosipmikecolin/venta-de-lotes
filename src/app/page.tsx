@@ -4,7 +4,7 @@ import Image from "next/image";
 import styles from "../css/page.module.css";
 import Logo from "../../public/logo.png";
 import Imagen1 from "../../public/imagen-1.png";
-import Imagen2 from "../../public/imagen-2.jpg";
+import Imagen2 from "../../public/imagen-2.jpeg";
 import Imagen3 from "../../public/image-3.jpeg";
 import Imagen4 from "../../public/image-4.jpg";
 import { Poppins } from "next/font/google";
