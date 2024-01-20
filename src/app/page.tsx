@@ -74,7 +74,12 @@ export default function Home() {
                 <Image
                   src={Imagen1}
                   alt="Imagen 1"
-                  style={{ borderRadius: 10, height: 400, objectFit: "cover" }}
+                  style={{
+                    borderRadius: 10,
+                    height: 400,
+                    objectFit: "cover",
+                    marginBottom: 20,
+                  }}
                 />
                 <h3 className={poppins.className}>Carretera pavimentada</h3>
                 <p>
@@ -90,7 +95,12 @@ export default function Home() {
                 <Image
                   src={Imagen2}
                   alt="Imagen 1"
-                  style={{ borderRadius: 10, height: 400, objectFit: "cover" }}
+                  style={{
+                    borderRadius: 10,
+                    height: 400,
+                    objectFit: "cover",
+                    marginBottom: 20,
+                  }}
                 />
                 <h3 className={poppins.className}>Rio rancho king</h3>
                 <p>
@@ -107,7 +117,12 @@ export default function Home() {
                 <Image
                   src={Imagen3}
                   alt="Imagen 1"
-                  style={{ borderRadius: 10, height: 400, objectFit: "cover" }}
+                  style={{
+                    borderRadius: 10,
+                    height: 400,
+                    objectFit: "cover",
+                    marginBottom: 20,
+                  }}
                 />
                 <h3 className={poppins.className}>Piscilagos</h3>
                 <p>
@@ -124,7 +139,12 @@ export default function Home() {
                 <Image
                   src={Imagen4}
                   alt="Imagen 1"
-                  style={{ borderRadius: 10, height: 400, objectFit: "cover" }}
+                  style={{
+                    borderRadius: 10,
+                    height: 400,
+                    objectFit: "cover",
+                    marginBottom: 20,
+                  }}
                 />
                 <h3 className={poppins.className}>Cerca de la Ciudad</h3>
                 <p>
