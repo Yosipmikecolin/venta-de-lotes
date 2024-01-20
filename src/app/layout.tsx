@@ -7,8 +7,8 @@ import "./globals.css";
 const poppins = Poppins({ weight: "400", subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Venta de lotes",
-  description: "Venta de lotes en villanueva casanare",
+  title: "Lotes en villanueva casanare",
+  description: "Lotes en villanueva casanare",
 };
 
 export default function RootLayout({

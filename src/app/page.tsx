@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Head from "next/head";
 import styles from "../css/page.module.css";
 import Logo from "../../public/logo.png";
 import Imagen1 from "../../public/imagen-1.png";
@@ -28,6 +29,12 @@ export default function Home() {
   return (
     <NextUIProvider>
       <section className={styles.container}>
+        <Head>
+          <meta
+            name="google-site-verification"
+            content="L7WjdoK3wJ5-KMCZvAj7eI1cuuTpGdrq5xUQ5Njk3MI"
+          />
+        </Head>
         <header>
           <nav className={styles.menu}>
             <ul>
