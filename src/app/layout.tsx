@@ -1,8 +1,7 @@
-
-
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
+import Head from "next/head";
 
 const poppins = Poppins({ weight: "400", subsets: ["latin"] });
 
@@ -18,7 +17,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es">
-        <body className={poppins.className}>{children}</body>
+      <Head>
+        <meta
+          name="google-site-verification"
+          content="L7WjdoK3wJ5-KMCZvAj7eI1cuuTpGdrq5xUQ5Njk3MI"
+        />
+      </Head>
+      <body className={poppins.className}>{children}</body>
     </html>
   );
 }
