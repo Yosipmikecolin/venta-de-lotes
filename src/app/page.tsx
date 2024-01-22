@@ -23,7 +23,6 @@ import {
 } from "@nextui-org/react";
 import "animate.css";
 import { useCallback, useEffect } from "react";
-import Head from "next/head";
 
 export default function Home() {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
@@ -40,13 +39,6 @@ export default function Home() {
   return (
     <NextUIProvider>
       <section className={styles.container}>
-        <Head>
-          <title>Venta de Lotes - Altos de Joshua Esteban</title>
-          <meta
-            name="description"
-            content="El mejor lugar para invertir en tu futuro en Villanueva Casanare."
-          />
-        </Head>
         <div onClick={playAudio}>
           <audio id="miAudio" controls style={{ display: "none" }}>
             <source src="/audio.mp3" type="audio/mp3" />
