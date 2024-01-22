@@ -41,7 +41,6 @@ export default function Home() {
     <NextUIProvider>
       <section className={styles.container}>
         <Head>
-          <title>Venta de Lotes - Altos de Joshua Esteban</title>
           <meta
             name="Lotes en villanueva casanare"
             content="El mejor lugar para invertir en tu futuro en Villanueva Casanare."
