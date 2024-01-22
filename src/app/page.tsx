@@ -22,12 +22,29 @@ import {
   useDisclosure,
 } from "@nextui-org/react";
 import "animate.css";
+import { useEffect } from "react";
 
 export default function Home() {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
+
+  useEffect(() => {
+    playAudio();
+  }, []);
+
+  const playAudio = () => {
+    const audio = document.getElementById("miAudio") as HTMLAudioElement;
+    audio?.play();
+  };
+
   return (
     <NextUIProvider>
       <section className={styles.container}>
+        <div onClick={playAudio}>
+          <audio id="miAudio" controls style={{ display: "none" }}>
+            <source src="/audio.mp3" type="audio/mp3" />
+          </audio>
+        </div>
+
         <header>
           <nav className={styles.menu}>
             <ul>
