@@ -18,12 +18,6 @@ export default function RootLayout({
 }) {
   return (
     <html>
-      <Head>
-        <meta
-          name="google-site-verification"
-          content="L7WjdoK3wJ5-KMCZvAj7eI1cuuTpGdrq5xUQ5Njk3MI"
-        />
-      </Head>
       <SpeedInsights />
       <body className={poppins.className}>{children}</body>
     </html>
