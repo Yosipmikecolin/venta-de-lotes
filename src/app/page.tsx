@@ -22,23 +22,31 @@ import {
   useDisclosure,
 } from "@nextui-org/react";
 import "animate.css";
-import { useEffect } from "react";
+import { useCallback, useEffect } from "react";
+import Head from "next/head";
 
 export default function Home() {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
+
+  const playAudio = useCallback(() => {
+    const audio = document.getElementById("miAudio") as HTMLAudioElement;
+    audio?.play();
+  }, []);
 
   useEffect(() => {
     playAudio();
   }, []);
 
-  const playAudio = () => {
-    const audio = document.getElementById("miAudio") as HTMLAudioElement;
-    audio?.play();
-  };
-
   return (
     <NextUIProvider>
       <section className={styles.container}>
+        <Head>
+          <title>Venta de Lotes - Altos de Joshua Esteban</title>
+          <meta
+            name="description"
+            content="El mejor lugar para invertir en tu futuro en Villanueva Casanare."
+          />
+        </Head>
         <div onClick={playAudio}>
           <audio id="miAudio" controls style={{ display: "none" }}>
             <source src="/audio.mp3" type="audio/mp3" />
@@ -111,7 +119,7 @@ export default function Home() {
               <div className={styles.box}>
                 <Image
                   src={Imagen2}
-                  alt="Imagen 1"
+                  alt="Imagen 2"
                   style={{
                     borderRadius: 10,
                     height: 400,
@@ -133,7 +141,7 @@ export default function Home() {
               <div className={styles.box}>
                 <Image
                   src={Imagen3}
-                  alt="Imagen 1"
+                  alt="Imagen 3"
                   style={{
                     borderRadius: 10,
                     height: 400,
@@ -155,7 +163,7 @@ export default function Home() {
               <div className={styles.box}>
                 <Image
                   src={Imagen4}
-                  alt="Imagen 1"
+                  alt="Imagen 4"
                   style={{
                     borderRadius: 10,
                     height: 400,
