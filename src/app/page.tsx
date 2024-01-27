@@ -8,7 +8,6 @@ import Imagen2 from "../../public/imagen-2.jpeg";
 import Imagen3 from "../../public/image-3.jpeg";
 import Imagen4 from "../../public/image-4.jpg";
 import { Poppins } from "next/font/google";
-import Icono from "./favicon.ico";
 import Gallery from "@/components/gallery/Gallery";
 const poppins = Poppins({ weight: "600", subsets: ["latin"] });
 const poppins2 = Poppins({ weight: "500", subsets: ["latin"] });
@@ -42,7 +41,7 @@ export default function Home() {
     <NextUIProvider>
       <section className={styles.container}>
         <Head>
-          <link rel="icon" href={Icono.src} />
+          <link rel="icon" href={"./favicon.ico"} sizes="32x32" />
           <meta
             name="Lotes en Villanueva Casanare"
             content="Los mejores lotes de villanueva casanare"
